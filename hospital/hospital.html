@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/loginstyle.css">
+	
+	
+	
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> <strong>FutureCare Medical </a>
+
+    <nav class="navbar">
+
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#services">services</a>
+        <a href="#doctors">doctors</a>
+        <a href="#appointment">appointment</a>
+        <a href="#review">review</a>
+        <a href="#blogs">blogs</a>
+		<a href="login.html">login</a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        
+        input[type=text], input[type=password] {
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          display: inline-block;
+          border: none;
+          background: #f1f1f1;
+        }
+        
+        input[type=text]:focus, input[type=password]:focus {
+          background-color: #ddd;
+          outline: none;
+        }
+        
+        
+        button {
+          background-color: #04AA6D;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          opacity: 0.9;
+        }
+        
+        button:hover {
+          opacity:1;
+        }
+        
+        .cancelbtn {
+          padding: 14px 20px;
+          background-color: #f44336;
+        }
+        
+        
+        .cancelbtn, .signupbtn {
+          float: left;
+          width: 50%;
+        }
+        
+        .container {
+          padding: 16px;
+        }
+        
+        
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: #474e5d;
+          padding-top: 50px;
+        }
+        
+        /* Modal Content/Box */
+        .modal-content {
+          background-color: #fefefe;
+          margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+          border: 1px solid #888;
+          width: 80%; /* Could be more or less, depending on screen size */
+        }
+        
+        /* Style the horizontal ruler */
+        hr {
+          border: 1px solid #f1f1f1;
+          margin-bottom: 25px;
+        }
+         
+        /* The Close Button (x) */
+        .close {
+          position: absolute;
+          right: 35px;
+          top: 15px;
+          font-size: 40px;
+          font-weight: bold;
+          color: #f1f1f1;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #f44336;
+          cursor: pointer;
+        }
+        
+        /* Clear floats */
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        
+        /* Change styles for cancel button and signup button on extra small screens */
+        @media screen and (max-width: 300px) {
+          .cancelbtn, .signupbtn {
+             width: 100%;
+          }
+        }
+         @keyframes colorChange {
+                    0% { color: red; }
+                    50% { color: black; }
+                    100% { color: pink; }
+                }
+        
+                .animated-word {
+                    display: inline-block;
+                    font-size: 24px;
+                    font-weight: bold;
+                    animation: colorChange 5s infinite;
+                }
+            
+            
+        
+        </style>
+
+</header>
+
+
+
+<section class="home" id="home">
+
+
+
+
+    <div class="image">
+        <img src="image/home-img.png" alt="">
+    </div>
+
+    <div class="content">
+        <h3 class="animated-word">we take care of your healthy life</h3>
+        <p>“The body is like a piano, and happiness is like music. It is needful to have the instrument in good order.”</p>
+
+
+
+</section>
+
+
+<section class="icons-container">
+
+    <div class="icons">
+        <i class="fas fa-user-md"></i>
+        <h3>30+</h3>
+        <p>doctors at work</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-users"></i>
+        <h3>100+</h3>
+        <p>satisfied patients</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-procedures"></i>
+        <h3>100+</h3>
+        <p>bed facility</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-hospital"></i>
+        <h3>10+</h3>
+        <p>available hospitals</p>
+    </div>
+
+</section>
+
+
+
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span>about</span> us </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="image/about-img.png" alt="">
+        </div>
+
+        <div class="content">
+            <h3>take the world's best quality treatment</h3>
+            <p>Our team of experienced physicians, nurses, and healthcare professionals stay at the forefront of medical advancements to ensure that you receive the best possible care. We continually invest in the latest technology and techniques to provide you with the most effective and efficient treatments available..</p>
+            <p></p>
+            <div class="icons">
+                <table class="table1">
+                  <tr>
+                    <td><div class="box"><div class="icon"><i class="fa fa-facebook-official" aria-hidden="true"></i></div></div> </td>
+                    <td><div class="box"><div class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></div> </div> </td>
+                    <td><div class="box"><div class="icon"><i class="fa fa-twitter" aria-hidden="true"></i></div> </div> </td>
+                  
+                </tr>
+                </table>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="services" id="services">
+
+<h1 class="heading"> our <span>services</span> </h1>
+
+    
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-notes-medical"></i>
+            <h3>free checkups</h3>
+            <p>scheduled medical appointment</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-ambulance"></i>
+            <h3>24/7 ambulance</h3>
+            <p>we provide ambulanse any time.</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-user-md"></i>
+            <h3>expert doctors</h3>
+            <p>We have expert doctors.</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-pills"></i>
+            <h3>medicines</h3>
+            <p>we have enough medicines.</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-procedures"></i>
+            <h3>bed facility</h3>
+            <p>500+ bed fasilities.</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-heartbeat"></i>
+            <h3>total care</h3>
+            <p>we care your life .</p>
+            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="doctors" id="doctors">
+
+    <h1 class="heading"> our <span>doctors</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="image/d1.jpg" alt="">
+            <h3>Dr.rajapaksha</h3>
+            <span>expert doctor</span>
+            <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+                
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="image/d2.jpg" alt="">
+            <h3>Dr.gunarathne</h3>
+            <span>expert doctor</span>
+            <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="image/d3.jpg" alt="">
+            <h3>Dr.perera</h3>
+            <span>expert doctor</span>
+            <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="image/d4.jpg" alt="">
+            <h3>Dr.fathima</h3>
+            <span>expert doctor</span>
+            <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="image/d5.jpg" alt="">
+            <h3>Dr.sandun</h3>
+            <span>expert doctor</span>
+            <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="image/d6.jpg" alt="">
+            <h3>Dr.nilantha</h3>
+            <span>expert doctor</span>
+            <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            
+            </div>
+        </div>
+        <div class="box">
+            <img src="image/d7.jpg" alt="">
+            <h3>Dr.amila</h3>
+            <span>intern doctor</span>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="image/d8.jpg" alt="">
+            <h3>Dr.nipun</h3>
+            <span>expert doctor</span>
+            <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="image/d9.jpg" alt="">
+            <h3>Dr.sethmi</h3>
+            <span>expert doctor</span>
+            <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="appointment" id="appointment">
+
+    <h1 class="heading"> <span>appointment</span> now </h1>    
+
+    <div class="row">
+
+        <div class="image">
+            <img src="image/contact-img.png" alt="">
+        </div>
+		
+		   <form action="" method="post">
+      
+            <h3>make appointment</h3>
+            <input type="text"name="name" placeholder="your name" class="box">
+            <input type="number"name="number" placeholder="your number" class="box">
+            <input type="email"name="email" placeholder="your email" class="box">
+            <input type="date"name="date" class="box">
+            <input type="submit" name="submit" value="appointment now" class="btn">
+        </form>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="review" id="review">
+    
+    <h1 class="heading"> client's <span>review</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="image/pic1.jpg" alt="">
+            <h3>D.perera</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">“Took my 8-year-old daughter for a UTI. The staff was phenomenal and better with kids than most places just for kids. Wish I got their names but the lady at check-in and the nurse or MA who took her vitals you ladies deserve a raise and recognition for your excellent attitudes and service. Much obliged.”</p>
+        </div>
+
+        <div class="box">
+            <img src="image/pic1.jpg" alt="">
+            <h3>S.K . Fernando</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">I appreciate the cleanliness of the office!  Such a great benefit that the office was open on Easter evening.  The front desk attendant was so nice and helpful.  It was the best walk in clinic experience</p>
+        </div>
+
+        <div class="box">
+            <img src="image/pic1.jpg" alt="">
+            <h3>R.chathuri</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">I was treated with respect and the staff had a professional attitude. I would recommend Well-Key to anyone who is looking for an Urgent Care and already have. Everyone was great!</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="blogs" id="blogs">
+
+    <h1 class="heading"> our <span>blogs</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="image/blog-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <a href="#"> <i class="fas fa-calendar"></i> 21 June, 2022 </a>
+                    <a href="#"> <i class="fas fa-user"></i> by Future care </a>
+                </div>
+                <h3>Altru Medical System</h3>
+                <p>A methodically updated blog with posts in topics ranging from joint care, nutrition, patient stories to substance abuse prevention which you can consult when in need of tips from healthcare industry professionals.</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="image/blog-2.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <a href="#"> <i class="fas fa-calendar"></i> 21 november, 2022 </a>
+                    <a href="#"> <i class="fas fa-user"></i> by Future care </a>
+                </div>
+                <h3>Understanding Alcohol-induced Liver Damage: Causes, Effects, And Prevention</h3>
+                <p>Alcohol is a widely consumed beverage around the world. While moderate alcohol consumption may have some potential health benefits, excessive or long-term alcohol use can be detrimental to various organs, and the liver is particularly vulnerable. In this article, we will explore how alcohol damages the liver and the mechanisms behind it.</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="image/blog-3.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <a href="#"> <i class="fas fa-calendar"></i> 30 aprill, 2023 </a>
+                    <a href="#"> <i class="fas fa-user"></i> by Future care </a>
+                </div>
+                <h3>Benefits Of Drinking Turmeric (Haldi) Water For A Healthy Body</h3>
+                <p>Turmeric is a commonly used spice in many households, known for its vibrant yellow colour and unique flavour. But did you know that it is also packed with amazing health benefits? Drinking turmeric water has become increasingly popular due to its many advantages for the body. Turmeric has long been recognized for its anti-inflammatory and antioxidant properties, which have been found to have numerous health benefits. </p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="image/blog-4.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <a href="#"> <i class="fas fa-calendar"></i> 17 Octomber, 2022 </a>
+                    <a href="#"> <i class="fas fa-user"></i> by Future care </a>
+                </div>
+                <h3>Unlock A Radiant Smile: Prevent Tooth Cavities With Expert Dental Care</h3>
+                <p>A smile is one of the first things people notice about you, and your teeth play a crucial role in creating a lasting impression. However, maintaining a healthy smile can be a challenge, especially when tooth cavities come into play. Tooth cavities, also known as dental caries or decay, are one of the most common dental problems affecting people of all ages. In this blog, we'll explore what causes tooth cavities, how they form, and most importantly how you can prevent them and the top dental medicine doctors in Bangalore..</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="image/blog-5.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <a href="#"> <i class="fas fa-calendar"></i> 3 november, 2022 </a>
+                    <a href="#"> <i class="fas fa-user"></i> by Future care </a>
+                </div>
+                <h3>Athletes And Heart Disease: Why Does It Happen?</h3>
+                <p>As a society, we often associate athletes with a high level of fitness and health. However, recent studies have shown that even athletes can be at risk for heart disease. This may come as a surprise to many, but the truth is that athletes, just like anyone else, can be affected by heart disease. In this blog, we'll explore why this happens and what athletes can do to reduce their risk</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="image/blog-6.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <a href="#"> <i class="fas fa-calendar"></i> 12 march ,2022 </a>
+                    <a href="#"> <i class="fas fa-user"></i>by Future care </a>
+                </div>
+                <h3>Rat-bite Fever: Symptoms And Treatment</h3>
+                <p>Rat Bite Fever (RBF) is a rare bacterial infection that can be transmitted from rats, mice, and other rodents to humans through bites, scratches, or contact with their urine or faeces. It is caused by two different types of bacteria, Streptobacillus moniliformis and Spirillum Minus, which are commonly found in the mouths and noses of rodents.</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home"> <i class="fas fa-chevron-right"></i> home </a>
+            <a href="#about"> <i class="fas fa-chevron-right"></i> about </a>
+            <a href="#services"> <i class="fas fa-chevron-right"></i> services </a>
+            <a href="#doctors"> <i class="fas fa-chevron-right"></i> doctors </a>
+            <a href="#appointment"> <i class="fas fa-chevron-right"></i> appointment </a>
+            <a href="#review"> <i class="fas fa-chevron-right"></i> review </a>
+            <a href="#blogs"> <i class="fas fa-chevron-right"></i> blogs </a>
+        </div>
+
+        <div class="box">
+            <h3>our services</h3>
+            <a href="#"> <i class="fas fa-chevron-right"></i> dental care </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> message therapy </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> cardioloty </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> diagnosis </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> ambulance service </a>
+        </div>
+
+        <div class="box">
+            <h3>appointment info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +94 31 5523412 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +94 31 2245123 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> FutureCareMedical@gmail.com </a>
+            <a href="#"> <i class="fas fa-envelope"></i> FutureCareMedi89@gmail.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> wennappuwa, Sri Lanka </a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"> <i class="fab fa-faceappointment-f"></i> faceappointment </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
+        </div>
+
+    </div>
+
+    <div class="credit"> </span> FutureCareMedical@gmail.com </div>
+
+</section>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+
